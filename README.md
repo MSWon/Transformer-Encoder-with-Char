@@ -5,7 +5,7 @@
 ## 1. Model structure
 ![alt text](https://github.com/MSWon/Transformer-Encoder-with-Char/blob/master/images/model_structure.png "Model")
 
-1. Input words are represented with **Char-CNN**, **Word2vec** concatenated together(64 dimensions each)
+1. Input words are represented with **Char-CNN**, **Word2vec** concatenated together(**64 dimensions each**)
 
 2. Normal Transformer Encoder from ([Attention is all you need](https://arxiv.org/pdf/1706.03762.pdf)) is used
 
