@@ -13,11 +13,16 @@ This code was created by referring to the code in [carpedm20](https://github.com
 
 4. Global Average Pooling layer with softmax is used at the end for predicting class 
 
-## 2. Prerequisite
+## 2. Char CNN
+![alt text](https://github.com/MSWon/Transformer-Encoder-with-Char/blob/master/images/char_cnn.PNG "Char CNN")
+
+1. Char CNN implemented by [Yoon Kim](https://arxiv.org/pdf/1508.06615.pdf)
+
+## 3. Prerequisite
 - [Tensorflow 1.8.0](https://www.tensorflow.org/)
 - Python 3.6
 
-## 3. Train
+## 4. Train
 
 1. Unzip **data.zip** and **embedding.zip**
 
@@ -25,3 +30,6 @@ This code was created by referring to the code in [carpedm20](https://github.com
 ```
 $ python train.py --batch_size 128 --training_epochs 12 --char_mode char_cnn
 ```
+
+## 5. Experiments
+![alt text](https://github.com/MSWon/Transformer-Encoder-with-Char/blob/master/images/test_loss_graph.png "loss graph")
