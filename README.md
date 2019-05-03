@@ -1,6 +1,6 @@
 # Transformer-Encoder-with-Char
-**Transformer Encoder with Char** information for text classification
-This code was created by referring to the code in [carpedm20](https://github.com/carpedm20/lstm-char-cnn-tensorflow) and [DongjunLee](https://github.com/DongjunLee/transformer-tensorflow)
+1. **Transformer Encoder with Char** information for text classification
+2. This code was created by referring to the code in [carpedm20](https://github.com/carpedm20/lstm-char-cnn-tensorflow) and [DongjunLee](https://github.com/DongjunLee/transformer-tensorflow)
 
 ## 1. Model structure
 ![alt text](https://github.com/MSWon/Transformer-Encoder-with-Char/blob/master/images/model_structure.png "Model")
