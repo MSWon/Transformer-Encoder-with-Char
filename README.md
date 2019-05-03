@@ -32,4 +32,5 @@ $ python train.py --batch_size 128 --training_epochs 12 --char_mode char_cnn
 ```
 
 ## 5. Experiments
+### 5-1. Test loss graph
 ![alt text](https://github.com/MSWon/Transformer-Encoder-with-Char/blob/master/images/test_loss_graph.png "loss graph")
