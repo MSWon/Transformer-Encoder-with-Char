@@ -12,3 +12,7 @@ This code was created by referring to the code in [carpedm20](https://github.com
 3. Model is composed of 7 Transformer Encoder layers with 4 attention heads
 
 4. Global Average Pooling layer with softmax is used at the end for predicting class 
+
+## 2. Prerequisite
+- [tensorflow >= 1.5.0](https://www.tensorflow.org/)
+- python == 3.6
