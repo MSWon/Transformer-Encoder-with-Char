@@ -85,7 +85,7 @@ class Preprocess():
         input_Y = np.array(input_Y)
         return input_X_index, input_X_char, input_X_char_len, input_Y
 
-    def get_word_embedding(self, filename = "polyglot-en.pkl"):
+    def get_word_embedding(self, filename = "./embedding/polyglot-en.pkl"):
         print("Getting polyglot embeddings!")
         words, vector = pd.read_pickle(filename)  ## polyglot-en.pkl
         words = ['<pad>'] + list(words)  ## add PAD ID
