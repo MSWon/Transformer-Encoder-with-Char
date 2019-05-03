@@ -14,5 +14,5 @@ This code was created by referring to the code in [carpedm20](https://github.com
 4. Global Average Pooling layer with softmax is used at the end for predicting class 
 
 ## 2. Prerequisite
-- [tensorflow >= 1.5.0](https://www.tensorflow.org/)
-- python == 3.6
+- [Tensorflow 1.8.0](https://www.tensorflow.org/)
+- Python 3.6
