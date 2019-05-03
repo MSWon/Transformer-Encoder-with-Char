@@ -19,7 +19,9 @@ This code was created by referring to the code in [carpedm20](https://github.com
 
 ## 3. Train
 
-1. unzip **data.zip** and **embedding.zip**
+1. Unzip **data.zip** and **embedding.zip**
+
+2. Train with settings
 ```
 $ python train.py --batch_size 128 --training_epochs 12 --char_mode char_cnn
 ```
