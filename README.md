@@ -44,7 +44,7 @@ $ python train.py --batch_size 128 --training_epochs 12 --char_mode char_cnn
 1. The **AG’s news** topic classification dataset is constructed by choosing 4 largest classes from the original news corpus
 2. 4 classes are ‘world’, ‘sports’, ‘business’ and ‘science/technology’
 3. Each class contains 30,000 training samples and 1,900 testing samples
-4. The total number of training samples is **120,000** and **7,600** for test
+4. The total number of **training samples** is **120,000** and **7,600** for **test**
 
 ### 5-2. Test loss graph
 ![alt text](https://github.com/MSWon/Transformer-Encoder-with-Char/blob/master/images/test_loss_graph.png "loss graph")
