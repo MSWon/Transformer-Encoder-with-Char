@@ -32,7 +32,7 @@ $ git clone https://github.com/MSWon/Transformer-Encoder-with-Char.git
 $ unzip data.zip
 $ unzip embedding.zip
 ```
-3. Training with custom settings (char_mode : (char_cnn, char_lstm, no_char))
+3. Training with user settings (char_mode : (char_cnn, char_lstm, no_char))
 ```
 $ python train.py --batch_size 128 --training_epochs 12 --char_mode char_cnn
 ```
