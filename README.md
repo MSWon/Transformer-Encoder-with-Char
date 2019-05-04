@@ -23,10 +23,16 @@
 - Python 3.6
 
 ## 4. Train
-
-1. Unzip **data.zip** and **embedding.zip**
-
-2. Train with settings
+1. Clone git
+```
+$ git clone https://github.com/MSWon/Transformer-Encoder-with-Char.git
+```
+2. Unzip **data.zip** and **embedding.zip**
+```
+$ unzip data.zip
+$ unzip embedding.zip
+```
+3. Train with settings
 ```
 $ python train.py --batch_size 128 --training_epochs 12 --char_mode char_cnn
 ```
