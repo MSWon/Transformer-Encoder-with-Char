@@ -30,7 +30,7 @@ class Model:
 
         ## Preprocess data
         self.prepro = preprocess.Preprocess(self.char_dim, self.max_sent_len, self.max_char_len)
-        self.train_X, self.train_seq_length, self.train_Y, self.test_X, self.test_seq_length, self.test_Y = self.prepro.load_data("./data/train.csv", "./data/test.csv", self.max_sent_len)
+        self.train_X, self.train_seq_length, self.train_Y, self.test_X, self.test_seq_length, self.test_Y = self.prepro.load_data("./train.csv", "./test.csv", self.max_sent_len)
         self.word_embedding, self.char_embedding = self.prepro.prepare_embedding(self.char_dim)
         self.train_X, self.train_X_char, self.train_X_char_len, self.train_Y = self.prepro.prepare_data(self.train_X, self.train_Y, "train")
         self.test_X, self.test_X_char, self.test_X_char_len, self.test_Y = self.prepro.prepare_data(self.test_X, self.test_Y, "test")
