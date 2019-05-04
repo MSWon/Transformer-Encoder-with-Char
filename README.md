@@ -22,7 +22,7 @@
 - [Tensorflow 1.8.0](https://www.tensorflow.org/)
 - Python 3.6
 
-## 4. Train
+## 4. Training
 1. Clone git
 ```
 $ git clone https://github.com/MSWon/Transformer-Encoder-with-Char.git
@@ -32,7 +32,7 @@ $ git clone https://github.com/MSWon/Transformer-Encoder-with-Char.git
 $ unzip data.zip
 $ unzip embedding.zip
 ```
-3. Train with settings
+3. Training with custom settings
 ```
 $ python train.py --batch_size 128 --training_epochs 12 --char_mode char_cnn
 ```
