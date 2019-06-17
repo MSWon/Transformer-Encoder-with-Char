@@ -341,12 +341,6 @@ def get_batch(train_X, train_X_char, train_X_char_len, train_Y, seq_length, batc
     global step
     if(mode =="init"):
         step = 0
-    train_batch_X = train_X[step*batch_size :]
-    train_batch_X_char = train_X_char[step*batch_size :]
-    train_batch_X_char_len = train_X_char_len[step*batch_size :]
-    train_batch_Y = train_Y[step*batch_size :]
-    train_batch_X_seq_len = seq_length[step*batch_size :]
- 
     train_batch_X = train_X[step*batch_size : (step+1)*batch_size]
     train_batch_X_char = train_X_char[step*batch_size : (step+1)*batch_size]
     train_batch_X_char_len = train_X_char_len[step*batch_size : (step+1)*batch_size]
