@@ -8,8 +8,7 @@ Created on Mon Jan 21 16:33:17 2019
 import tensorflow as tf
 
 from attention import Attention
-from layer import FFN
-
+from layer import FFN, LayerNormalization
 
 class Encoder:
 
@@ -33,6 +32,7 @@ class Encoder:
         self.dropout = dropout
         self.n_class = n_class
         self.batch_size = batch_size
+        self.layer_norm = LayerNormalization(self.model_dim)
 
     def build(self, encoder_inputs, seq_len):
         o1 = tf.identity(encoder_inputs)
@@ -76,7 +76,7 @@ class Encoder:
 
     def _add_and_norm(self, x, sub_layer_x, num=0):
         with tf.variable_scope("add-and-norm-{}".format(num)):
-            return tf.contrib.layers.layer_norm(tf.add(x, sub_layer_x)) # with Residual connection
+            return self.layer_norm(tf.add(x, sub_layer_x)) # with Residual connection
 
     def _positional_feed_forward(self, output):
         with tf.variable_scope("feed-forward"):
