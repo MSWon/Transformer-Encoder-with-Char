@@ -15,15 +15,12 @@ __all__ = [
     "positional_encoding", "Attention"
 ]
 
-
 def positional_encoding(dim, sentence_length, dtype=tf.float32):
-
-    encoded_vec = np.array([pos/np.power(10000, 2*i/dim) for pos in range(sentence_length) for i in range(dim)])
-    encoded_vec[::2] = np.sin(encoded_vec[::2])
-    encoded_vec[1::2] = np.cos(encoded_vec[1::2])
-    encoded_vec = encoded_vec.reshape([sentence_length, dim])
-    encoded_vec = np.append(encoded_vec,np.zeros((1,dim)),axis=0)
-    return tf.convert_to_tensor(encoded_vec, dtype=dtype)
+    pos_enc = np.array([[pos / np.power(10000., 2. * (i // 2) / dim) for i in range(dim)] for pos in range(sentence_length)]) # [seq_len, d_model]    
+    # Apply the cosine to even columns and sin to odds.
+    pos_enc[:, 0::2] = np.sin(pos_enc[:, 0::2])  # dim 2i
+    pos_enc[:, 1::2] = np.cos(pos_enc[:, 1::2])  # dim 2i+1
+    return tf.convert_to_tensor(pos_enc, dtype=dtype)
 
 
 class Attention:
