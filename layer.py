@@ -8,7 +8,27 @@ Created on Mon Jan 21 16:37:55 2019
 import tensorflow as tf
 import numpy as np
 
+class LayerNormalization(tf.layers.Layer):
+  """Applies layer normalization."""
 
+  def __init__(self, hidden_size):
+    super(LayerNormalization, self).__init__()
+    self.hidden_size = hidden_size
+
+  def build(self, _):
+    self.scale = tf.get_variable("layer_norm_scale", [self.hidden_size],
+                                 initializer=tf.ones_initializer())
+    self.bias = tf.get_variable("layer_norm_bias", [self.hidden_size],
+                                initializer=tf.zeros_initializer())
+    self.built = True
+
+  def call(self, x, epsilon=1e-6):
+    mean = tf.reduce_mean(x, axis=[-1], keepdims=True)
+    variance = tf.reduce_mean(tf.square(x - mean), axis=[-1], keepdims=True)
+    norm_x = (x - mean) * tf.rsqrt(variance + epsilon)
+    return norm_x * self.scale + self.bias
+
+  
 def gelu(x):
   """Gaussian Error Linear Unit.
 
